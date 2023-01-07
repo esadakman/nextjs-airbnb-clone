@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import Banner from "../components/Banner";
 import SmallCard from "../components/SmallCard";
 import MediumCard from "../components/MediumCard";
+import LargeCard from "../components/LargeCard";
+import Footer from "../components/Footer";
 
 export default function Home({ exploreData, cardsData }) {
   // let slider = document.getElementById("slider");
@@ -39,13 +41,21 @@ export default function Home({ exploreData, cardsData }) {
             <div
               id="slider"
               className="w-full flex space-x-3 overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide p-5 -ml-3 "
-            > 
+            >
               {cardsData.map(({ img, title }, ind) => (
                 <MediumCard key={ind} img={img} title={title} />
               ))}
             </div>
           </section>
+
+          <LargeCard
+            img="https://links.papareact.com/4cj"
+            title="The Greatest Outdoors"
+            description="Whishlist curated by Airbnb."
+            buttonText="Get Inspired"
+          />
         </main>
+        <Footer />
       </div>
     </>
   );

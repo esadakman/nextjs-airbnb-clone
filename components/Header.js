@@ -9,7 +9,7 @@ import { GlobeAltIcon } from "@heroicons/react/24/outline";
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white my-1 shadow-lg p-5 md:px-8">
+    <header className="fixed w-screen top-0 z-50 grid grid-cols-3 bg-white shadow-lg p-5 md:px-8">
       {/* left */}
       <div className="relative flex items-center h-10 my-auto ">
         <Image
