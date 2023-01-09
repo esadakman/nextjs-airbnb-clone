@@ -10,15 +10,17 @@ import { useState } from "react";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
+import { useRouter } from "next/router";
 
-function Header() {
+function Header({placeholder}) {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [numOfGuests, setNumOfGuests] = useState(1);
+  const router = useRouter();
   // console.log(searchInput);
   const handleSelect = (ranges) => {
-    console.log(ranges);
+    // console.log(ranges);
     setStartDate(ranges.Selection.startDate);
     setEndDate(ranges.Selection.endDate);
   };
@@ -26,6 +28,19 @@ function Header() {
   // const resetInput = () => {
   //   setSearchInput(" ");
   // };
+
+  const search = () => {
+    router.push({
+      pathname: "/search",
+      query: {
+        location: searchInput,
+        startDate: startDate.toISOString(),
+        endDate: endDate.toISOString(),
+        numOfGuests,
+      },
+    });
+    setSearchInput("");
+  };
 
   const selectionRange = {
     startDate: startDate,
@@ -36,7 +51,10 @@ function Header() {
   return (
     <header className="fixed w-screen top-0 z-50 grid grid-cols-3 bg-white shadow-lg p-5 md:px-8">
       {/* left */}
-      <div className="relative flex items-center h-10 my-auto ">
+      <div
+        onClick={() => router.push("/")}
+        className="relative flex items-center h-10 my-auto "
+      >
         <Image
           src="https://links.papareact.com/qd3"
           alt="logo"
@@ -52,7 +70,7 @@ function Header() {
           value={searchInput || ""}
           className="pl-4 flex-grow bg-transparent outline-none text-gray-600 placeholder-gray-400"
           type="text"
-          placeholder="Start Your Search"
+          placeholder={placeholder || "Start Your Search"}
           onChange={(e) => setSearchInput(e.target.value)}
         />
         <MagnifyingGlassIcon className="hidden md:inline-flex h-8 p-2 text-white bg-red-400 rounded-full cursor-pointer md:mx-2" />
@@ -97,7 +115,9 @@ function Header() {
             >
               Cancel
             </button>
-            <button className="flex-grow text-red-400">Search</button>
+            <button onClick={search} className="flex-grow text-red-400">
+              Search
+            </button>
           </div>
         </div>
       )}

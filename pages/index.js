@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 import SmallCard from "../components/SmallCard";
 import MediumCard from "../components/MediumCard";
 import LargeCard from "../components/LargeCard";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 export default function Home({ exploreData, cardsData }) {
   // let slider = document.getElementById("slider");
@@ -55,7 +55,7 @@ export default function Home({ exploreData, cardsData }) {
             buttonText="Get Inspired"
           />
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );
