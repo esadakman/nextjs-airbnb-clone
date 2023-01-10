@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
+import MapGL from "../components/MapGL";
 
 function Search({ searchResults }) {
   const router = useRouter();
@@ -58,6 +59,9 @@ function Search({ searchResults }) {
               )
             )}
           </div>
+        </section>
+        <section className="hidden lg:inline-flex min-w-[600px]">
+          <MapGL searchResults={searchResults} />
         </section>
       </main>
     </>

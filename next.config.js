@@ -8,5 +8,8 @@ module.exports = {
       // domains: ['upload.wikimedia.org']
       domains: ['links.papareact.com', 'jsonkeeper.com']
   },
-  nextConfig
+  nextConfig,
+  env: {
+    mapbox_key: ''
+  }
 }
