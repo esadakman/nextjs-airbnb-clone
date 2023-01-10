@@ -12,7 +12,7 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/router";
 
-function Header({placeholder}) {
+function Header({ placeholder }) {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -58,8 +58,10 @@ function Header({placeholder}) {
         <Image
           src="https://links.papareact.com/qd3"
           alt="logo"
-          priority="true"
-          sizes="100vw"
+          priority="true" 
+          sizes="(min-width: 60em) 24vw,
+                    (min-width: 28em) 45vw,
+                    100vw"
           fill
           className="object-contain object-left cursor-pointer"
         />

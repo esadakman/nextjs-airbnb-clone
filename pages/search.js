@@ -5,7 +5,7 @@ import InfoCard from "../components/InfoCard";
 
 function Search({ searchResults }) {
   const router = useRouter();
-  console.log(searchResults);
+  // console.log(searchResults);
   // ES 6 Destructuring
   const { location, startDate, endDate, numOfGuests } = router.query;
 
@@ -33,29 +33,31 @@ function Search({ searchResults }) {
             <p className="button">Rooms and Beds</p>
             <p className="button">More Filters</p>
           </div>
-          {searchResults.map(
-            ({
-              img,
-              location,
-              title,
-              description,
-              star,
-              price,
-              total,
-              lat,
-            }) => ( 
-              <InfoCard
-                key={lat}
-                img={img}
-                location={location}
-                title={title}
-                description={description}
-                star={star}
-                price={price}
-                total={total}
-              />
-            )
-          )}
+          <div className="flex flex-col ">
+            {searchResults.map(
+              ({
+                img,
+                location,
+                title,
+                description,
+                star,
+                price,
+                total,
+                lat,
+              }) => (
+                <InfoCard
+                  key={lat}
+                  img={img}
+                  location={location}
+                  title={title}
+                  description={description}
+                  star={star}
+                  price={price}
+                  total={total}
+                />
+              )
+            )}
+          </div>
         </section>
       </main>
     </>
