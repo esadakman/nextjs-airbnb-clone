@@ -9,12 +9,12 @@ export default function SmallCard({ img, location, distance }) {
       <div className="relative h-16 w-16">
         <Image
           src={img}
+          alt="explore images"
           fill
           className="rounded-lg "
-          sizes="(max-width: 768px) 100vw,
-                  (max-width: 1200px) 50vw,
-                  33vw"
-          alt="explore images"
+          sizes="(min-width: 60em) 24vw,
+                    (min-width: 28em) 45vw,
+                    100vw"
         />
       </div>
       <div>
