@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import getCenter from "geolib/es/getCenter";
 export default function MapGL({ searchResults }) {
+  const mapbox_key = process.env.MAPBOX_KEY;
   const [selectedLocation, setSelectedLocation] = useState({});
   // Transform Search Results object into the
   // { latitude: 52.516272, longitude: 13.377722 } object
@@ -20,11 +21,11 @@ export default function MapGL({ searchResults }) {
     longitude: center.longitude,
     zoom: 11.5,
   });
-
+  // console.log(mapbox_key);
   return (
     <ReactMapGL
       mapStyle="mapbox://styles/desaad/clcq04er9004a14pf80lbn9u2"
-      mapboxApiAccessToken={process.env.mapbox_key}
+      mapboxApiAccessToken={mapbox_key}
       {...viewPort}
       onViewportChange={(nextViewport) => setViewport(nextViewport)}
     >

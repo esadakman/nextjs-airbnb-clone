@@ -10,6 +10,6 @@ module.exports = {
   },
   nextConfig,
   env: {
-    mapbox_key: ''
-  }
+    MAPBOX_KEY: process.env.MAPBOX_KEY,
+  },
 }
