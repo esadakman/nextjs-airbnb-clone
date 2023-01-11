@@ -17,7 +17,10 @@ export default function Home({ exploreData, cardsData }) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
           <title>Airbnb</title>
-          <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet"></link>
+          <link
+            href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
+            rel="stylesheet"
+          ></link>
         </Head>
 
         <Header />
@@ -41,7 +44,7 @@ export default function Home({ exploreData, cardsData }) {
             <h2 className="text-4xl font-semibold pb-5">Live Anywhere</h2>
             <div
               id="slider"
-              className="w-full flex space-x-3 overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide p-5 -ml-3 "
+              className="w-full flex justify-between space-x-3 overflow-x-scroll scroll whitespace-nowrap scroll-smooth  p-5 -ml-3 scrollbar-hide"
             >
               {cardsData.map(({ img, title }, ind) => (
                 <MediumCard key={ind} img={img} title={title} />
