@@ -1,4 +1,4 @@
-# NextJS - Aairbnb Clone
+# NextJS - Airbnb Clone
 
 ## Objective
 
