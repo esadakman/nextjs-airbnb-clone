@@ -2,13 +2,14 @@ import Image from "next/image";
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
 
-function InfoCard({ img, location, title, description, star, price, total }) {
+function InfoCard({ img, location, title, description, star, price, total }) { 
   return (
     <div className="flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t">
       <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
         <Image
           src={img}
           alt="Search Image"
+          priority="true" 
           fill
           sizes="(min-width: 60em) 24vw,
                     (min-width: 28em) 45vw,

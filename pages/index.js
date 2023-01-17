@@ -19,7 +19,7 @@ export default function Home({ exploreData, cardsData }) {
           <title>Airbnb</title>
           <link
             href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
-            rel="stylesheet"
+            // rel="stylesheet"
           ></link>
         </Head>
 
