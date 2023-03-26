@@ -66,10 +66,10 @@ export default function Home({ exploreData, cardsData }) {
 }
 
 export async function getStaticProps() {
-  const exploreData = await fetch("https://api.npoint.io/15f86c253f01664c7b84").then(
+  const exploreData = await fetch("https://api.npoint.io/e8a3490638285e97b7cf").then(
     (res) => res.json()
   );
-  const cardsData = await fetch("https://api.npoint.io/15f86c253f01664c7b84").then(
+  const cardsData = await fetch("https://api.npoint.io/f95ea572c3684e646f52").then(
     (res) => res.json()
   );
   return {

@@ -6,7 +6,7 @@ const nextConfig = {
 module.exports = {
   images: {
     // domains: ['upload.wikimedia.org']
-    domains: ["links.papareact.com", "jsonkeeper.com", "api.npoint.io", 'www.nauticareport.it', 'a0.muscache.com'],
+    domains: ["links.papareact.com", "jsonkeeper.com", "api.npoint.io", 'www.nauticareport.it', 'a0.muscache.com',"images.fineartamerica.com","i.ebayimg.com","www.thetimes.co.uk"],
   },
   nextConfig,
   env: {

@@ -2,12 +2,12 @@
 // exploreData 
 [
   {
-    img: "https://links.papareact.com/512",
+    img: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/london-travel-poster-missy-ames.jpg",
     location: "London",
     distance: "45-minute drive",
   },
   {
-    img: "https://links.papareact.com/ito",
+    img: "https://i.ebayimg.com/images/g/4OAAAOSw3BBjDlHu/s-l500.jpg",
     location: "Manchester",
     distance: "4.5-hour drive",
   },
