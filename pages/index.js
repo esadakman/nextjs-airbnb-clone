@@ -66,10 +66,10 @@ export default function Home({ exploreData, cardsData }) {
 }
 
 export async function getStaticProps() {
-  const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G").then(
+  const exploreData = await fetch("https://api.npoint.io/15f86c253f01664c7b84").then(
     (res) => res.json()
   );
-  const cardsData = await fetch("https://www.jsonkeeper.com/b/VHHT").then(
+  const cardsData = await fetch("https://api.npoint.io/15f86c253f01664c7b84").then(
     (res) => res.json()
   );
   return {
@@ -79,3 +79,4 @@ export async function getStaticProps() {
     },
   };
 }
+

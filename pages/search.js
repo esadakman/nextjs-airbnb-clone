@@ -75,7 +75,7 @@ function Search({ searchResults }) {
 export default Search;
 
 export async function getServerSideProps() {
-  const searchResults = await fetch("https://www.jsonkeeper.com/b/5NPS").then(
+  const searchResults = await fetch("https://api.npoint.io/15f86c253f01664c7b84").then(
     (res) => res.json()
   );
   return {
